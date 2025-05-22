@@ -55,5 +55,21 @@ namespace xUnitWebApplication.Tests.Controllers
             //Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void HomeController_GuessNumber_ValidNumber()
+        {
+            //AAA methodology
+            //Arrange
+            HomeController controller = new HomeController();
+            int number = 100;
+            string expectedResult = "Hurray!!! You guessed the right number";
+
+            //Act
+            string actualResult = controller.GuessNumber(number);
+
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
