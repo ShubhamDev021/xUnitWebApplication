@@ -11,5 +11,21 @@ namespace xUnitWebApplication.Controllers
         {
             return "I am in Home Controller";
         }
+
+        public string GuessNumber(int number)
+        {
+            if (number > 100)
+            {
+                return "Wrong!!! You guessed a large number";
+            }
+            else if (number < 100)
+            {
+                return "Wrong!!! You guessed a small number";
+            }
+            else
+            {
+                return "Hurray!!! You guessed the right number";
+            }
+        }
     }
 }

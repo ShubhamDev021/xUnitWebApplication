@@ -23,5 +23,37 @@ namespace xUnitWebApplication.Tests.Controllers
             //Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void HomeController_GuessNumber_InvalidLargeNumber()
+        {
+            //AAA methodology
+            //Arrange
+            HomeController controller = new HomeController();
+            int number = 120;
+            string expectedResult = "Wrong!!! You guessed a large number";
+
+            //Act
+            string actualResult = controller.GuessNumber(number);
+
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Fact]
+        public void HomeController_GuessNumber_InvalidSmallNumber()
+        {
+            //AAA methodology
+            //Arrange
+            HomeController controller = new HomeController();
+            int number = 80;
+            string expectedResult = "Wrong!!! You guessed a small number";
+
+            //Act
+            string actualResult = controller.GuessNumber(number);
+
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
