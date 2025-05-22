@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace xUnitWebApplication.Tests.Controllers
 {
-    internal class HomeControllerTest
+    public class HomeControllerTest
     {
+        [Fact]
+        public void HomeController_Index_ValidResult()
+        {
+
+        }
     }
 }
